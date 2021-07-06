@@ -1,12 +1,70 @@
-.section1 .col {
-  border: solid red thin;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.section1 .aa {
-  padding: none;
+.section1 {
+  position: relative;
+  height: 100vh;
 }
 
-.section1 .aa .random h1 {
-  font-size: 10rem;
+.section1 .main-page .main-page-name {
+  padding: 3rem 0.5rem 0 0.5rem;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.section1 .main-page .main-page-name h1 {
+  font-weight: 400;
+}
+
+.section1 .main-page .main-page-paragraph {
+  padding: 1.5rem 0.5rem 0 0.5rem;
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.section1 .main-page .main-page-paragraph h3 {
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.section1 .main-page .btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section1 .main-page .btn-group .main-page-button {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+  margin: 1rem 0 1rem 0.5rem;
+  background-color: transparent;
+  border: solid white thin;
+  width: 10rem;
+  height: 3.5rem;
+}
+
+.section1::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("/src/other-image/desk-1081708_1920.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/src/other-image/desk-1081708_1920.jpg");
+  background-position: center bottom;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 /*# sourceMappingURL=App.css.map */

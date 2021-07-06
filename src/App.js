@@ -23,23 +23,29 @@ class App extends Component {
         </header>
 
         <div className="section1">
-          <Container>
+          <Container className="main-page">
             <Row>
-              <Col>
-                <div className="random">
-                  <h1>ahoy!</h1>
+              <Col className="">
+                <div className="main-page-name">
+                  <h1>Justin Lee</h1>
                 </div>
               </Col>
-              <Col>2 of 2</Col>
             </Row>
             <Row>
-              <Col>1 of 3</Col>
-              <Col>2 of 3</Col>
-              <Col>3 of 3</Col>
+              <Col xs={7} className="">
+                <div className="main-page-paragraph">
+                  <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                  <h3>consectetur adipiscing elit</h3>
+                  <h3>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h3>
+                </div>
+              </Col>
             </Row>
+            <div className="btn-group">
+              <button className="main-page-button">PROJECTS</button>
+              <button className="main-page-button">ABOUT ME</button>
+            </div>
           </Container>
         </div>{/* section1 */}
-
 
       </div>
     );
