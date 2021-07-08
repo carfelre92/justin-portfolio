@@ -1,15 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 $main-font: "Playfair Display", serif;
+@mixin image-gradient {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    z-index: 1;
+}
+
+@mixin about-image-text {
+    color: white;
+    font-weight: bold;
+    font-family: $main-font;
+}
+
+@mixin about-paragraph-container {
+    font-family: $main-font;
+    color: black;
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0 0 0.2rem 1rem;
+
+}
+
+@mixin about-paragraph{
+    box-sizing: border-box;
+    padding: 0.3rem 1rem;
+    border-left: 6px solid black;
+    border-radius: 2px;
+}
 
 * {
     box-sizing: border-box;
 }
+
 .section1 {
     position: relative;
     height: 100vh;
 
-    .main-page{
+    .main-page {
         .main-page-name {
             padding: 3rem 0.5rem 0 0.5rem;
             color: white;
@@ -19,32 +52,32 @@ $main-font: "Playfair Display", serif;
             }
         }
 
-        .main-page-paragraph{
-            padding: 1.5rem 0.5rem 0 0.5rem;
-            color:white;
+        .main-page-paragraph {
+            padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+            color: white;
             font-family: $main-font;
 
             h3 {
                 line-height: 1.5;
-                font-size:1.3rem;
+                font-size: 1.3rem;
                 font-weight: 100;
             }
         }
 
-        .btn-group{
-            display:flex;
-            flex-direction:column;
-            
-            .main-page-button{
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+
+            .main-page-button {
                 font-family: $main-font;
-                font-size:1.5rem;
+                font-size: 1.5rem;
                 font-weight: 400;
-                color:white;
-                margin:1rem 0 1rem 0.5rem;
+                color: white;
+                margin: 1rem 0 1rem 0.5rem;
                 background-color: transparent;
-                border:solid white thin;
-                width:10rem;
-                height:3.5rem;
+                border: solid white thin;
+                width: 10rem;
+                height: 3.5rem;
             }
         }
     }
@@ -59,9 +92,122 @@ $main-font: "Playfair Display", serif;
     left: 0;
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-        url("/src/other-image/desk-1081708_1920.jpg");
-    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    //     url("/src/other-image/simpolo-2020169_1920.jpg");
+        url("/src/srcImages/desk-1081708_1920.jpg");
     background-position: center bottom;
     filter: grayscale(100%);
+}
+
+.section2 {
+    .about-page {
+        .about-me {
+            position: relative;
+            padding: 0 1.2rem;
+
+            .about-me-container {
+                .about-me-photo-container {
+                    position: relative;
+
+                    .img-gradient-container {
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            filter: grayscale(100%);
+                        }
+                    }
+
+                    .img-gradient-container::before {
+                        @include image-gradient();
+                    }
+
+                    .about-image-text {
+                        position: absolute;
+                        bottom: 0;
+                        padding: 1rem;
+                        z-index: 2;
+
+                        h2 {
+                            @include about-image-text();
+                        }
+                    }
+                }
+
+                .about-me-paragraph-container {
+                    @include about-paragraph-container();
+
+                    .about-me-paragraph {
+                        @include about-paragraph();
+
+                        h2 {
+                            font-weight: bold;
+                            margin-bottom: 1.5rem;
+                        }
+                        h3 {
+                            font-size: 1.3rem;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-expertise {
+            position: relative;
+            padding: 4rem 1.2rem;
+
+            .about-expertise-container{
+
+                .about-expertise-photo-container {
+                    position: relative;
+    
+                    .img-gradient-container {
+                        position: relative;
+                        padding-top: 100%;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            vertical-align: top;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+    
+                    .img-gradient-container::before {
+                        @include image-gradient();
+                    }
+    
+                    .about-expertise-text {
+                        position: absolute;
+                        bottom: 0;
+                        padding: 1rem;
+                        z-index: 2;
+    
+                        h2 {
+                            @include about-image-text();
+                        }
+                    }
+                }
+    
+                .about-expertise-paragraph-container {
+                    @include about-paragraph-container();
+    
+                    .about-expertise-paragraph {
+                        @include about-paragraph();
+                        
+                        h3 {
+                            font-size: 1.3rem;
+                            line-height: 1.2;
+                            display: list-item;
+                            list-style-type: disc;
+                            list-style-position: inside;
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
 }

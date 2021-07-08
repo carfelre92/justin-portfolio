@@ -31,8 +31,8 @@ class Main extends Component {
                         </Col>
                     </Row>
                     <div className="btn-group">
-                        <button className="main-page-button">PROJECTS</button>
-                        <button className="main-page-button">ABOUT ME</button>
+                        <button className="main-page-button button1">PROJECTS</button>
+                        <button className="main-page-button button2">ABOUT ME</button>
                     </div>
                 </Container>
             </div>

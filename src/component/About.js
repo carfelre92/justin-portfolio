@@ -1,43 +1,67 @@
-import { React, Component } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
-class About extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
+export const About = (props) => {
 
-        }
-    }
+    const { aaa, bbb, ccc } = props;
+    const [expertise, setExpertise] = useState(['Lorem', 'Ipsum','Dolor','Sit','Amet','Consectetur']);
+    console.log(props)
 
-    render() {
-        return (
-                <div className="section1">
-                    <Container className="main-page">
-                        <Row>
-                            <Col className="">
-                                <div className="main-page-name">
-                                    <h1>Its about page tbh</h1>
+    return (
+
+
+        <div className="section2">
+            <Container className="about-page">
+                <Row>
+                    <Col xs={12} className="about-me">
+                        <div className="about-me-container">
+                            <div className="about-me-photo-container">
+                                <div className="img-gradient-container">
+                                    <img src="/images/aboutme-image/1.jpg" className="image" alt="" />
                                 </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col xs={7} className="">
-                                <div className="main-page-paragraph">
-                                    <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                                    <h3>consectetur adipiscing elit</h3>
-                                    <h3>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h3>
+                                <div className="about-image-text">
+                                    <h2>About Me</h2>
                                 </div>
-                            </Col>
-                        </Row>
-                        <div className="btn-group">
-                            <button className="main-page-button">PROJECTS</button>
-                            <button className="main-page-button">ABOUT ME</button>
+                            </div>
+                            <div className="about-me-paragraph-container">
+                                <div className="about-me-paragraph">
+                                    <h2>Hi, Im Justin</h2>
+                                    <h3>Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat
+                                        nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui
+                                    </h3>
+                                </div>
+                            </div>
                         </div>
-                    </Container>
-                </div>
-        )
-    }
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12} className="about-expertise">
+                        <div className="about-expertise-container">
+                            <div className="about-expertise-photo-container">
+                                <div className="img-gradient-container">
+                                    <img src="/images/aboutme-image/1.png" className="image" alt="" />
+                                </div>
+                                <div className="about-expertise-text">
+                                    <h2>My Expertise</h2>
+                                </div>
+                            </div>
+                            <div className="about-expertise-paragraph-container">
+                                <div className="about-expertise-paragraph">
+                                    {expertise.map((data) => (
+                                        <h3>{data}</h3>)
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    )
+
 }
 
 export default About;

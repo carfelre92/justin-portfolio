@@ -20,7 +20,7 @@
 }
 
 .section1 .main-page .main-page-paragraph {
-  padding: 1.5rem 0.5rem 0 0.5rem;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   color: white;
   font-family: "Playfair Display", serif;
 }
@@ -61,10 +61,152 @@
   top: 0;
   left: 0;
   background-size: cover;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("/src/other-image/desk-1081708_1920.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/src/other-image/desk-1081708_1920.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("/src/srcImages/desk-1081708_1920.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/src/srcImages/desk-1081708_1920.jpg");
   background-position: center bottom;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+.section2 .about-page .about-me {
+  position: relative;
+  padding: 0 1.2rem;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-photo-container {
+  position: relative;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-photo-container .img-gradient-container {
+  position: relative;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-photo-container .img-gradient-container img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-photo-container .img-gradient-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+  z-index: 1;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-photo-container .about-image-text {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-photo-container .about-image-text h2 {
+  color: white;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-paragraph-container {
+  font-family: "Playfair Display", serif;
+  color: black;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 0 0 0.2rem 1rem;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-paragraph-container .about-me-paragraph {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.3rem 1rem;
+  border-left: 6px solid black;
+  border-radius: 2px;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-paragraph-container .about-me-paragraph h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.section2 .about-page .about-me .about-me-container .about-me-paragraph-container .about-me-paragraph h3 {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.section2 .about-page .about-expertise {
+  position: relative;
+  padding: 4rem 1.2rem;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-photo-container {
+  position: relative;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-photo-container .img-gradient-container {
+  position: relative;
+  padding-top: 100%;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-photo-container .img-gradient-container img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-photo-container .img-gradient-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+  z-index: 1;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-photo-container .about-expertise-text {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-photo-container .about-expertise-text h2 {
+  color: white;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-paragraph-container {
+  font-family: "Playfair Display", serif;
+  color: black;
+  width: 100%;
+  margin-top: 3rem;
+  padding: 0 0 0.2rem 1rem;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-paragraph-container .about-expertise-paragraph {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.3rem 1rem;
+  border-left: 6px solid black;
+  border-radius: 2px;
+}
+
+.section2 .about-page .about-expertise .about-expertise-container .about-expertise-paragraph-container .about-expertise-paragraph h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 /*# sourceMappingURL=App.css.map */
