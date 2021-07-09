@@ -1,12 +1,20 @@
+import ReactDOM from 'react-dom'
 import { React, Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import About from './component/About';
 import Main from './component/Main';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { render } from 'react-dom';
-import Popper from 'popper.js';
-import MetaTags from 'react-meta-tags';
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { fab } from '@fortawesome/free-brands-svg-icons'
+// import { fas } from '@fortawesome/free-solid-svg-icons'
+// import { faBars, faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+// library.add(fab, faCheckSquare, faCoffee)
+// library.add(fas, faBars)
+// import { render } from 'react-dom';
+// import Popper from 'popper.js';
+// import MetaTags from 'react-meta-tags';
 
 
 class App extends Component {
@@ -25,7 +33,7 @@ class App extends Component {
           priority: 'Not Urgent',
         },
       ],
-      bbb:'oh my',
+      bbb: 'oh my',
       ccc: 11,
     }
   }
@@ -36,7 +44,7 @@ class App extends Component {
     //console.log(dayum)
 
     return (
-      
+
       <div className="wrapper">
         <Router>
           <Switch>

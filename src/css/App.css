@@ -4,6 +4,40 @@
           box-sizing: border-box;
 }
 
+header {
+  padding: 1rem 0.5rem 2rem 0;
+}
+
+header .nav-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5.6rem;
+}
+
+header .nav-bar img {
+  width: 260px;
+  height: 36px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+header .nav-bar .nav-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+header .nav-bar .nav-list {
+  display: none;
+}
+
 .section1 {
   position: relative;
   height: 100vh;
@@ -73,6 +107,10 @@
   padding: 0 1.2rem;
 }
 
+.section2 .about-page .about-me .about-me-container {
+  position: relative;
+}
+
 .section2 .about-page .about-me .about-me-container .about-me-photo-container {
   position: relative;
 }
@@ -116,8 +154,7 @@
   font-family: "Playfair Display", serif;
   color: black;
   width: 100%;
-  margin-top: 3rem;
-  padding: 0 0 0.2rem 1rem;
+  padding: 3rem 0 0.2rem 1rem;
 }
 
 .section2 .about-page .about-me .about-me-container .about-me-paragraph-container .about-me-paragraph {
@@ -190,8 +227,7 @@
   font-family: "Playfair Display", serif;
   color: black;
   width: 100%;
-  margin-top: 3rem;
-  padding: 0 0 0.2rem 1rem;
+  padding: 3rem 0 0.2rem 1rem;
 }
 
 .section2 .about-page .about-expertise .about-expertise-container .about-expertise-paragraph-container .about-expertise-paragraph {
@@ -208,5 +244,129 @@
   display: list-item;
   list-style-type: disc;
   list-style-position: inside;
+}
+
+footer {
+  color: white;
+  text-align: center;
+}
+
+footer .footer-col-one {
+  background-color: #565656;
+  height: 200px;
+  position: relative;
+}
+
+footer .footer-col-one .first-container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 0;
+}
+
+footer .footer-col-one .first-container .text {
+  font-weight: bold;
+}
+
+footer .footer-col-one .first-container h2 {
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  padding: 0.5rem 0;
+}
+
+footer .footer-col-two {
+  background-color: #111111;
+  height: 200px;
+}
+
+footer .footer-col-two .second-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+footer .footer-col-two .second-container .empty {
+  height: 33%;
+}
+
+footer .footer-col-two .second-container .icon-container {
+  height: 33%;
+}
+
+footer .footer-col-two .second-container .icon-container .icon {
+  font-size: 2.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-col-two .second-container .icon-container .icon div {
+  padding: 0 1rem;
+}
+
+footer .footer-col-two .second-container .text {
+  height: 33%;
+  padding-top: 0.3rem;
+}
+
+footer .footer-col-two .second-container h2 {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 2.5rem 0.5rem 2rem 0;
+  }
+  header .nav-icon {
+    display: none !important;
+  }
+  header .nav-list {
+    display: block !important;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: 0;
+  }
+  header .nav-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  header .nav-list li {
+    display: inline;
+    padding: 0 1rem;
+  }
+  header .nav-list li a {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+  }
+  .section2 .about-meparagraph-container {
+    font-family: "Playfair Display", serif;
+    color: black;
+    width: 100%;
+    padding: 3rem 0 0.2rem 1rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    left: 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */

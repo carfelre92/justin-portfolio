@@ -22,12 +22,10 @@ $main-font: "Playfair Display", serif;
     font-family: $main-font;
     color: black;
     width: 100%;
-    margin-top: 3rem;
-    padding: 0 0 0.2rem 1rem;
-
+    padding: 3rem 0 0.2rem 1rem;
 }
 
-@mixin about-paragraph{
+@mixin about-paragraph {
     box-sizing: border-box;
     padding: 0.3rem 1rem;
     border-left: 6px solid black;
@@ -36,6 +34,35 @@ $main-font: "Playfair Display", serif;
 
 * {
     box-sizing: border-box;
+}
+
+header {
+    padding: 1rem 0.5rem 2rem 0;
+
+    .nav-bar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 5.6rem;
+
+        img {
+            width: 260px;
+            height: 36px;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .nav-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .nav-list {
+            display: none;
+        }
+    }
 }
 
 .section1 {
@@ -104,6 +131,7 @@ $main-font: "Playfair Display", serif;
             padding: 0 1.2rem;
 
             .about-me-container {
+                position: relative;
                 .about-me-photo-container {
                     position: relative;
 
@@ -155,15 +183,14 @@ $main-font: "Playfair Display", serif;
             position: relative;
             padding: 4rem 1.2rem;
 
-            .about-expertise-container{
-
+            .about-expertise-container {
                 .about-expertise-photo-container {
                     position: relative;
-    
+
                     .img-gradient-container {
                         position: relative;
                         padding-top: 100%;
-    
+
                         img {
                             width: 100%;
                             height: 100%;
@@ -173,29 +200,29 @@ $main-font: "Playfair Display", serif;
                             left: 0;
                         }
                     }
-    
+
                     .img-gradient-container::before {
                         @include image-gradient();
                     }
-    
+
                     .about-expertise-text {
                         position: absolute;
                         bottom: 0;
                         padding: 1rem;
                         z-index: 2;
-    
+
                         h2 {
                             @include about-image-text();
                         }
                     }
                 }
-    
+
                 .about-expertise-paragraph-container {
                     @include about-paragraph-container();
-    
+
                     .about-expertise-paragraph {
                         @include about-paragraph();
-                        
+
                         h3 {
                             font-size: 1.3rem;
                             line-height: 1.2;
@@ -206,8 +233,126 @@ $main-font: "Playfair Display", serif;
                     }
                 }
             }
+        }
+    }
+}
 
+footer {
+    color: white;
+    text-align: center;
+    .footer-col-one {
+        background-color: #565656;
+        height: 200px;
+        position: relative;
 
+        .first-container {
+            position: absolute;
+            width:100%;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 0;
+
+            .text {
+                font-weight: bold;
+            }
+            h2 {
+                font-size: 1.2rem;
+                font-family: $main-font;
+                padding:0.5rem 0;
+            }
+        }
+    }
+
+    .footer-col-two {
+        background-color: #111111;
+        height: 200px;
+
+        .second-container {
+            display: flex;
+            flex-direction: column;
+            height:100%;
+
+            .empty{
+                height:33%;
+            }
+
+            .icon-container{
+                height:33%;
+
+                .icon{
+                    font-size:2.3rem;
+                    display:flex;
+                    justify-content: center;
+
+                    div{
+                        padding:0 1rem;
+                    }
+                }
+            }
+
+            .text{
+                height:33%;
+                padding-top:0.3rem;
+            }
+            h2 {
+                font-size: 1rem;
+                font-family: $main-font;
+                padding-bottom:0.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+    //Table Size
+
+    header {
+        padding: 2.5rem 0.5rem 2rem 0;
+
+        .nav-icon {
+            display: none !important;
+        }
+
+        .nav-list {
+            display: block !important;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 0;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            li {
+                display: inline;
+                padding: 0 1rem;
+                a {
+                    font-family: $main-font;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .section2 {
+        .about-meparagraph-container {
+            @include about-paragraph-container();
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
         }
     }
 }
