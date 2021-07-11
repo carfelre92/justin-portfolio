@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@-webkit-keyframes nav-menu-active {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+  }
+}
+@keyframes nav-menu-active {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -36,6 +53,105 @@ header .nav-bar .nav-icon {
 
 header .nav-bar .nav-list {
   display: none;
+}
+
+.nav-menu {
+  z-index: 99;
+  background-color: white;
+  position: fixed;
+  padding: 1rem 0;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.nav-menu .nav-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5.6rem;
+}
+
+.nav-menu .nav-bar img {
+  width: 260px;
+  height: 36px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.nav-menu .nav-bar .nav-cross {
+  position: relative;
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.nav-menu .nav-bar .nav-cross .cross-container {
+  height: 20.8px;
+  width: 20.8px;
+  right: 1rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.nav-menu .nav-list {
+  padding-top: 2rem;
+}
+
+.nav-menu .nav-list ul {
+  margin: 0;
+}
+
+.nav-menu .nav-list ul li {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  list-style-type: none;
+  color: black;
+  padding: 1rem 0;
+}
+
+.nav-menu .nav-social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.nav-menu .nav-social-container .social-icon {
+  font-size: 2.5rem;
+  padding: 0 1rem;
+}
+
+.nav-menu .by {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.nav-menu .by h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+}
+
+.menu-animate {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .section1 {
@@ -102,9 +218,14 @@ header .nav-bar .nav-list {
           filter: grayscale(100%);
 }
 
+.section2 {
+  background-color: white;
+}
+
 .section2 .about-page .about-me {
   position: relative;
   padding: 0 1.2rem;
+  background-color: white;
 }
 
 .section2 .about-page .about-me .about-me-container {
@@ -320,7 +441,7 @@ footer .footer-col-two .second-container .text {
 }
 
 footer .footer-col-two .second-container h2 {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-family: "Playfair Display", serif;
   padding-bottom: 0.5rem;
 }
@@ -349,15 +470,13 @@ footer .footer-col-two .second-container h2 {
   header .nav-list li {
     display: inline;
     padding: 0 1rem;
-  }
-  header .nav-list li a {
     font-family: "Playfair Display", serif;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
   }
-  .section2 .about-meparagraph-container {
+  .section2 .about-me-paragraph-container {
     font-family: "Playfair Display", serif;
     color: black;
     width: 100%;
@@ -367,6 +486,15 @@ footer .footer-col-two .second-container h2 {
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     left: 0;
+  }
+  .section2 .about-image-text {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    z-index: 2;
+  }
+  .section2 .about-image-text h2 {
+    font-size: 4rem;
   }
 }
 /*# sourceMappingURL=App.css.map */

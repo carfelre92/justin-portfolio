@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { NavProvider } from './NavContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, } from 'react-bootstrap';
 import Header from './Header';
 import Footer from './Footer';
+import NavContainer from './NavContainer';
 
 export const About = (props) => {
 
-    // const { aaa, bbb, ccc } = props;
+    const { aaa, bbb, ccc } = props;
     const [expertise, setExpertise] = useState(() => ['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur']);
-    console.log(expertise)
+    // console.log(aaa)
+    /////////////////////////////////
+    // const updateExpertise = () => {
+    //     setExpertise([...expertise, 'Hehey man']);
+    //     console.log('clicked');
+    // }
 
-    const updateExpertise = () => {
-        setExpertise([...expertise, 'Hehey man']);
-        console.log('clicked');
-    }
-
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
+    const [isMobile, setIsMobile] = useState();
 
     useEffect(() => {
         window.addEventListener("resize", () => {
@@ -23,12 +25,15 @@ export const About = (props) => {
             if (ismobile !== isMobile) setIsMobile(ismobile);
         }, false);
     }, [isMobile]);
+    ///////////////////////////////
 
     return (
-
-
         <div className="section2">
-            <Header></Header>
+            <NavProvider>
+                <NavContainer />
+
+                <Header />
+            </NavProvider>
             <Container className="about-page">
                 <div className="about-me">
                     <div className="about-me-container">
@@ -78,10 +83,9 @@ export const About = (props) => {
                     </div>
                 </div>
             </Container>
-            <Footer></Footer>                           
+            <Footer />
         </div>
     )
-
 }
 
 export default About;

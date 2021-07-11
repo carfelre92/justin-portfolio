@@ -1,4 +1,5 @@
 import { React, Component } from 'react';
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -31,8 +32,12 @@ class Main extends Component {
                         </Col>
                     </Row>
                     <div className="btn-group">
-                        <button className="main-page-button button1">PROJECTS</button>
-                        <button className="main-page-button button2">ABOUT ME</button>
+                        <Link to="/projects">
+                            <button className="main-page-button button1">PROJECTS</button>
+                        </Link>
+                        <Link to="/about">
+                            <button className="main-page-button button2">ABOUT ME</button>
+                        </Link>
                     </div>
                 </Container>
             </div>

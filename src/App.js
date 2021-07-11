@@ -4,18 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import About from './component/About';
 import Main from './component/Main';
+import NavContainer from './component/NavContainer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
-// import { fas } from '@fortawesome/free-solid-svg-icons'
-// import { faBars, faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
-
-// library.add(fab, faCheckSquare, faCoffee)
-// library.add(fas, faBars)
-// import { render } from 'react-dom';
-// import Popper from 'popper.js';
-// import MetaTags from 'react-meta-tags';
-
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +30,7 @@ class App extends Component {
 
   render() {
 
-    var dayum = this.state
+    //var dayum = this.state
     //console.log(dayum)
 
     return (
@@ -54,6 +44,9 @@ class App extends Component {
             <Route
               path="/about"
               component={() => <About {...this.state} />} />
+            <Route
+              path="/menu"
+              component={() => <NavContainer {...this.state} />} />
           </Switch>
         </Router>
       </div>
