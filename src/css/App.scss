@@ -38,7 +38,6 @@ $main-font: "Playfair Display", serif;
     }
 
     100% {
-        
     }
 }
 
@@ -82,8 +81,8 @@ header {
     padding: 1rem 0;
     height: 100vh;
     width: 100vw;
-    transition:0.5s;
-    transform: translateY(-0%);
+    transition: 0.5s;
+    transform: translateY(-100%);
 
     .nav-bar {
         position: relative;
@@ -154,8 +153,8 @@ header {
 }
 
 .menu-animate {
-    transition:0.5s;
-    transform: translateY(-100%);
+    transition: 0.5s;
+    transform: translateY(-0%);
 }
 
 .section1 {
@@ -187,6 +186,7 @@ header {
         .btn-group {
             display: flex;
             flex-direction: column;
+            width: 0;
 
             .main-page-button {
                 font-family: $main-font;
@@ -223,7 +223,7 @@ header {
         .about-me {
             position: relative;
             padding: 0 1.2rem;
-            background-color:white;
+            background-color: white;
 
             .about-me-container {
                 position: relative;
@@ -314,6 +314,7 @@ header {
 
                 .about-expertise-paragraph-container {
                     @include about-paragraph-container();
+                    position: relative;
 
                     .about-expertise-paragraph {
                         @include about-paragraph();
@@ -330,6 +331,39 @@ header {
             }
         }
     }
+}
+
+.section3 {
+    min-height: 100vh;
+
+    .row-container{
+        padding:0.25rem;
+
+        .square {
+            position: relative;
+            padding:0;
+    
+            .content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding:0.5rem;
+    
+                img{
+                    height:100%;
+                    width:100%;
+                }
+              }
+        }
+    
+        .square:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+
+
 }
 
 footer {
@@ -455,7 +489,41 @@ footer {
             z-index: 2;
 
             h2 {
-                font-size: 4rem;
+                font-size: 3rem;
+            }
+        }
+
+        .about-expertise-paragraph {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+        }
+
+        .about-expertise-text {
+            position: absolute;
+            bottom: 0;
+            padding: 1rem;
+            z-index: 2;
+
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .section2 {
+        .about-image-text {
+            h2 {
+                font-size: 3.75rem;
+            }
+        }
+
+        .about-expertise-text {
+            h2 {
+                font-size: 3.75rem;
             }
         }
     }

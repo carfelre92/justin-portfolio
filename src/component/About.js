@@ -31,7 +31,6 @@ export const About = (props) => {
         <div className="section2">
             <NavProvider>
                 <NavContainer />
-
                 <Header />
             </NavProvider>
             <Container className="about-page">

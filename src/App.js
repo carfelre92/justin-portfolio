@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import About from './component/About';
 import Main from './component/Main';
+import Projects from './component/Projects';
 import NavContainer from './component/NavContainer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -45,8 +46,11 @@ class App extends Component {
               path="/about"
               component={() => <About {...this.state} />} />
             <Route
+              path="/projects"
+              component={() => <Projects {...this.state} />} />
+            {/* <Route
               path="/menu"
-              component={() => <NavContainer {...this.state} />} />
+              component={() => <NavContainer {...this.state} />} /> */}
           </Switch>
         </Router>
       </div>

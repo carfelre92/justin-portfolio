@@ -64,8 +64,8 @@ header .nav-bar .nav-list {
   width: 100vw;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .nav-menu .nav-bar {
@@ -150,8 +150,8 @@ header .nav-bar .nav-list {
 .menu-animate {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .section1 {
@@ -189,6 +189,7 @@ header .nav-bar .nav-list {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 0;
 }
 
 .section1 .main-page .btn-group .main-page-button {
@@ -349,6 +350,7 @@ header .nav-bar .nav-list {
   color: black;
   width: 100%;
   padding: 3rem 0 0.2rem 1rem;
+  position: relative;
 }
 
 .section2 .about-page .about-expertise .about-expertise-container .about-expertise-paragraph-container .about-expertise-paragraph {
@@ -365,6 +367,37 @@ header .nav-bar .nav-list {
   display: list-item;
   list-style-type: disc;
   list-style-position: inside;
+}
+
+.section3 {
+  min-height: 100vh;
+}
+
+.section3 .row-container {
+  padding: 0.25rem;
+}
+
+.section3 .row-container .square {
+  position: relative;
+  padding: 0;
+}
+
+.section3 .row-container .square .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.section3 .row-container .square .content img {
+  height: 100%;
+  width: 100%;
+}
+
+.section3 .row-container .square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 footer {
@@ -494,7 +527,32 @@ footer .footer-col-two .second-container h2 {
     z-index: 2;
   }
   .section2 .about-image-text h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+  .section2 .about-expertise-paragraph {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    left: 0;
+  }
+  .section2 .about-expertise-text {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    z-index: 2;
+  }
+  .section2 .about-expertise-text h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section2 .about-image-text h2 {
+    font-size: 3.75rem;
+  }
+  .section2 .about-expertise-text h2 {
+    font-size: 3.75rem;
   }
 }
 /*# sourceMappingURL=App.css.map */
