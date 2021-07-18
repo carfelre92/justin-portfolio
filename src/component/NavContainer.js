@@ -20,7 +20,6 @@ const NavContainer = () => {
     return (
         <div className={isActive ? "nav-menu" : "nav-menu menu-animate"}>
             {/* <button onClick={handleToggle}>Toggle class</button> */}
-            <h1>{ }</h1>
             <Container>
                 <Row>
                     <Col xs={12} className="nav-bar">

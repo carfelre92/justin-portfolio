@@ -24,7 +24,7 @@
 
 header {
   padding: 1rem 0.5rem 2rem 0;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 header .nav-bar {
@@ -59,7 +59,7 @@ header .nav-bar .nav-list {
 
 .nav-menu {
   z-index: 99;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   position: fixed;
   padding: 1rem 0;
   height: 100vh;
@@ -101,10 +101,11 @@ header .nav-bar .nav-list {
   height: 20.8px;
   width: 20.8px;
   right: 1rem;
-  position: absolute;
   top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  position: absolute;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  font-size: 2rem;
 }
 
 .nav-menu .nav-list {
@@ -222,13 +223,13 @@ header .nav-bar .nav-list {
 }
 
 .section2 {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .section2 .about-page .about-me {
   position: relative;
   padding: 0 1.2rem;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .section2 .about-page .about-me .about-me-container {
@@ -373,7 +374,7 @@ header .nav-bar .nav-list {
 
 .section3 {
   min-height: 100vh;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .section3 .row-container {
@@ -491,12 +492,13 @@ footer .footer-col-one .first-container {
   right: 0;
 }
 
-footer .footer-col-one .first-container .text {
+footer .footer-col-one .first-container .text h2 {
   font-weight: bold;
+  font-size: 1.3rem;
 }
 
 footer .footer-col-one .first-container h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "Playfair Display", serif;
   padding: 0.5rem 0;
 }
@@ -600,14 +602,14 @@ footer .footer-col-two .second-container h2 {
     z-index: 2;
   }
   .section2 .about-image-text h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .section2 .about-expertise-paragraph {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
-    left: 0;
+    left: 2rem;
   }
   .section2 .about-expertise-text {
     position: absolute;
@@ -616,7 +618,7 @@ footer .footer-col-two .second-container h2 {
     z-index: 2;
   }
   .section2 .about-expertise-text h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
