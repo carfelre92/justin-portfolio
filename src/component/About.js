@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavProvider } from './NavContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, } from 'react-bootstrap';
@@ -8,7 +8,7 @@ import NavContainer from './NavContainer';
 
 export const About = (props) => {
 
-    const { aaa, bbb, ccc } = props;
+    // const { aaa, bbb, ccc } = props;
     const [expertise, setExpertise] = useState(() => ['Lorem', 'Ipsum', 'Dolor', 'Sit', 'Amet', 'Consectetur']);
     // console.log(aaa)
     /////////////////////////////////

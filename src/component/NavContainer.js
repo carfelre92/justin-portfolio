@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { NavContext } from './NavContext';
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,14 +20,16 @@ const NavContainer = () => {
     return (
         <div className={isActive ? "nav-menu" : "nav-menu menu-animate"}>
             {/* <button onClick={handleToggle}>Toggle class</button> */}
-            <h1>{}</h1>
+            <h1>{ }</h1>
             <Container>
                 <Row>
                     <Col xs={12} className="nav-bar">
-                        <img className="nav-logo-image" src="/images/other-image/Justin-logo.png" alt="" />
+                        <Link to="/">
+                            <img className="nav-logo-image" src="/images/other-image/Justin-logo.png" alt="" />
+                        </Link>
                         <div className="nav-cross">
                             <div className="cross-container">
-                                <ImCross onClick={handleToggle}/>
+                                <ImCross onClick={handleToggle} />
                             </div>
                         </div>
                     </Col>

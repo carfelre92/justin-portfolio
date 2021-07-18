@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookSquare, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
