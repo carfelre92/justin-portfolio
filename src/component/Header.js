@@ -1,16 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavContext } from './NavContext';
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BsList } from "react-icons/bs";
+import * as FaIcons from 'react-icons/fa';
 
 const Header = () => {
 
     const [isActive, setActive] = useContext(NavContext);
+    const [isOpen, setOpen] = useState("false");
+    const [isScrollHidden, setScrollHidden] = useState("false");
 
     const handleToggle = () => {
         setActive(!isActive);
+        setOpen(!isOpen);
+        ooo();
+        setScrollHidden(!isScrollHidden);
+    }
+
+    const ooo = () =>{
+        return (isScrollHidden ? document.body.classList.add('of-hide') : document.body.classList.remove('of-hide'));
     }
 
     return (
@@ -21,8 +31,11 @@ const Header = () => {
                         <Link to="/">
                             <img className="nav-logo-image" src="/images/other-image/Justin-logo.png" alt="" />
                         </Link>
-                        <div className="nav-icon">
-                            <BsList onClick={handleToggle} />
+                        <div className={`${isOpen ? "nav-icon" : "nav-icon open"}`} onClick={handleToggle}>
+                            {/* <FaIcons.FaBars onClick={handleToggle} /> */}
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                         <div className="nav-list">
                             <ul>

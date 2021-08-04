@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
+import UploadForm from './component/UploadForm';
 import About from './component/About';
 import Main from './component/Main';
 import Projects from './component/Projects';
@@ -37,6 +38,7 @@ class App extends Component {
     return (
 
       <div className="wrapper">
+        {/* <UploadForm/> */}
           <Router>
             <Switch>
               <Route
@@ -53,10 +55,6 @@ class App extends Component {
                   path="/projectDetail/:id"
                   component={() => <ProjectDetail />} />
               </ProjectProvider>
-
-              {/* <Route
-              path="/menu"
-              component={() => <NavContainer {...this.state} />} /> */}
             </Switch>
           </Router>
       </div>

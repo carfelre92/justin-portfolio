@@ -25,6 +25,8 @@ export const About = (props) => {
             if (ismobile !== isMobile) setIsMobile(ismobile);
         }, false);
     }, [isMobile]);
+
+
     ///////////////////////////////
 
     return (
@@ -37,7 +39,7 @@ export const About = (props) => {
                 <div className="about-me">
                     <div className="about-me-container">
                         <Row className={`${isMobile ? "" : "flex-row-reverse"}`}>
-                            <Col xs={12} sm={12} md={6} className="about-me-photo-container">
+                            <Col xs={12} sm={12} md={5} className="about-me-photo-container">
                                 <div className="img-gradient-container">
                                     <img src="/images/aboutme-image/1.jpg" className="image" alt="" />
                                 </div>
@@ -45,7 +47,7 @@ export const About = (props) => {
                                     <h2>About Me</h2>
                                 </div>
                             </Col>
-                            <Col xs={12} sm={12} md={6} className="about-me-paragraph-container">
+                            <Col xs={12} sm={12} md={7} className="about-me-paragraph-container">
                                 <div className="about-me-paragraph">
                                     <h2>Hi, Im Justin</h2>
                                     <h3>Duis aute irure dolor in reprehenderit in
@@ -62,7 +64,7 @@ export const About = (props) => {
                 <div className="about-expertise">
                     <div className="about-expertise-container">
                         <Row>
-                            <Col xs={12} sm={12} md={6} className="about-expertise-photo-container">
+                            <Col xs={12} sm={12} md={5} className="about-expertise-photo-container">
                                 <div className="img-gradient-container">
                                     <img src="/images/aboutme-image/1.png" className="image" alt="" />
                                 </div>
@@ -70,7 +72,7 @@ export const About = (props) => {
                                     <h2>My Expertise</h2>
                                 </div>
                             </Col>
-                            <Col xs={12} sm={12} md={6} className="about-expertise-paragraph-container">
+                            <Col xs={12} sm={12} md={7} className="about-expertise-paragraph-container">
                                 <div className="about-expertise-paragraph">
                                     {expertise.map((data) => (
                                         <h3>{data}</h3>)

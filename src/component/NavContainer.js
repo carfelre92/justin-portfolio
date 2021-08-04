@@ -3,10 +3,9 @@ import { NavContext } from './NavContext';
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
-import { ImCross } from "react-icons/im";
-import { RiFacebookBoxLine } from "react-icons/ri";
-import { RiInstagramLine } from "react-icons/ri";
-import { RiLinkedinBoxLine } from "react-icons/ri";
+import * as AiIcons from 'react-icons/ai';
+import * as ImIcons from "react-icons/im";
+import * as RiIcons from "react-icons/ri";
 
 
 const NavContainer = () => {
@@ -19,7 +18,6 @@ const NavContainer = () => {
 
     return (
         <div className={isActive ? "nav-menu" : "nav-menu menu-animate"}>
-            {/* <button onClick={handleToggle}>Toggle class</button> */}
             <Container>
                 <Row>
                     <Col xs={12} className="nav-bar">
@@ -28,7 +26,7 @@ const NavContainer = () => {
                         </Link>
                         <div className="nav-cross">
                             <div className="cross-container">
-                                <ImCross onClick={handleToggle} />
+                                <AiIcons.AiOutlineClose onClick={handleToggle} />
                             </div>
                         </div>
                     </Col>
@@ -45,13 +43,13 @@ const NavContainer = () => {
                     <Col xs={12}>
                         <div className="nav-social-container">
                             <div className="social-icon">
-                                <RiFacebookBoxLine />
+                                <RiIcons.RiFacebookBoxLine/>
                             </div>
                             <div className="social-icon">
-                                <RiInstagramLine />
+                                <RiIcons.RiInstagramLine />
                             </div>
                             <div className="social-icon">
-                                <RiLinkedinBoxLine />
+                                <RiIcons.RiLinkedinBoxLine />
                             </div>
                         </div>
                     </Col>
