@@ -1,19 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavContext } from './NavContext';
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import * as AiIcons from 'react-icons/ai';
-import * as ImIcons from "react-icons/im";
-import * as RiIcons from "react-icons/ri";
+import * as FaIcons from "react-icons/fa";
 
 
 const NavContainer = () => {
 
     const [isActive, setActive] = useContext(NavContext);
+    const [isScrollHidden, setScrollHidden] = useContext(NavContext);
+    const history = useHistory()
 
     const handleToggle = () => {
         setActive(!isActive);
+    }
+
+    const removeHide = () => {
+        document.body.classList.remove('of-hide')
     }
 
     return (
@@ -32,25 +38,22 @@ const NavContainer = () => {
                     </Col>
                     <div className="nav-list">
                         <ul>
-                            <Link to="/projects">
+                            <Link to="/projects" onClick={removeHide}>
                                 <li>Projects</li>
                             </Link>
-                            <Link to="/about">
+                            <Link to="/about" onClick={removeHide}>
                                 <li>About Me</li>
                             </Link>
                         </ul>
                     </div>
                     <Col xs={12}>
                         <div className="nav-social-container">
-                            <div className="social-icon">
-                                <RiIcons.RiFacebookBoxLine/>
-                            </div>
-                            <div className="social-icon">
-                                <RiIcons.RiInstagramLine />
-                            </div>
-                            <div className="social-icon">
-                                <RiIcons.RiLinkedinBoxLine />
-                            </div>
+                            <a href="https://www.instagram.com/hagi093_/" className="social-icon" >
+                                <FaIcons.FaInstagramSquare />
+                            </a>
+                            <a href="https://www.linkedin.com/in/justin-lee-b88a8715b/" className="social-icon">
+                                <FaIcons.FaLinkedin />
+                            </a>
                         </div>
                     </Col>
                     <Col xs={7} className="by">
