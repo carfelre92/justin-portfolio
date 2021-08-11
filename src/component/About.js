@@ -31,6 +31,7 @@ export const About = (props) => {
 
     return (
         <div className="section2">
+            {document.body.classList.remove('of-hide')}
             <NavProvider>
                 <NavContainer />
                 <Header />
