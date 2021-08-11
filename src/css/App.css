@@ -165,7 +165,8 @@ header .nav-bar .nav-list {
 
 .nav-menu .nav-social-container .social-icon {
   font-size: 2.5rem;
-  padding: 0 1rem;
+  padding: 0 1.4rem;
+  color: black;
 }
 
 .nav-menu .by {
@@ -549,7 +550,7 @@ footer .footer-col-two .second-container {
 }
 
 footer .footer-col-two .second-container .empty {
-  height: 33%;
+  height: 25%;
 }
 
 footer .footer-col-two .second-container .icon-container {
@@ -564,6 +565,11 @@ footer .footer-col-two .second-container .icon-container .icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+footer .footer-col-two .second-container .icon-container .icon a {
+  padding: 0 1.5rem;
+  color: white;
 }
 
 footer .footer-col-two .second-container .icon-container .icon div {
@@ -648,6 +654,9 @@ footer .footer-col-two .second-container h2 {
   }
   .section2 .about-expertise-text h2 {
     font-size: 2.5rem;
+  }
+  .section2 .nav-menu {
+    display: none;
   }
 }
 

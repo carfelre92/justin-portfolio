@@ -167,7 +167,8 @@ header {
 
         .social-icon {
             font-size: 2.5rem;
-            padding: 0 1rem;
+            padding: 0 1.4rem;
+            color:black;
         }
     }
 
@@ -469,6 +470,7 @@ header {
 footer {
     color: white;
     text-align: center;
+
     .footer-col-one {
         background-color: #565656;
         height: 200px;
@@ -505,7 +507,7 @@ footer {
             height: 100%;
 
             .empty {
-                height: 33%;
+                height: 25%;
             }
 
             .icon-container {
@@ -515,6 +517,11 @@ footer {
                     font-size: 2.3rem;
                     display: flex;
                     justify-content: center;
+
+                    a{
+                        padding:0 1.5rem;
+                        color:white;
+                    }
 
                     div {
                         padding: 0 1rem;
@@ -616,6 +623,10 @@ footer {
             h2 {
                 font-size: 2.5rem;
             }
+        }
+
+        .nav-menu{
+            display:none;
         }
     }
 }
