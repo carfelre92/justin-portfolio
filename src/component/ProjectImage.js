@@ -19,7 +19,11 @@ export const ProjectImage = () => {
                             <Link to={`projectDetail/${data._id}`}>
                                 <img src={data.contentDetails[0]} alt=""></img>
                             </Link>
+                            <Link to={`projectDetail/${data._id}`} className="content-hover">
+                                    <h1>{data.projectName}</h1>
+                            </Link>
                         </div>
+
                     </Col>)
                 )}
             </Row>
