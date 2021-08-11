@@ -424,8 +424,49 @@ header .nav-bar .nav-list {
 }
 
 .section3 .row-container .square .content img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   height: 100%;
   width: 100%;
+}
+
+.section3 .row-container .square .content-hover {
+  background-clip: content-box;
+  z-index: 99;
+  position: absolute;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.section3 .row-container .square .content-hover h1 {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+.section3 .row-container .square .content:hover img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.section3 .row-container .square .content:hover .content-hover {
+  background-color: rgba(41, 41, 41, 0.5);
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .section3 .row-container .square:after {
