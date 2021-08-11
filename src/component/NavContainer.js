@@ -23,6 +23,7 @@ const NavContainer = () => {
     }
 
     return (
+        
         <div className={isActive ? "nav-menu" : "nav-menu menu-animate"}>
             <Container>
                 <Row>
@@ -38,10 +39,10 @@ const NavContainer = () => {
                     </Col>
                     <div className="nav-list">
                         <ul>
-                            <Link to="/projects" onClick={removeHide}>
+                            <Link to="/projects" onClick={handleToggle}>
                                 <li>Projects</li>
                             </Link>
-                            <Link to="/about" onClick={removeHide}>
+                            <Link to="/about" onClick={handleToggle}>
                                 <li>About Me</li>
                             </Link>
                         </ul>

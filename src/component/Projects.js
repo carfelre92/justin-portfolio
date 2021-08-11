@@ -11,6 +11,7 @@ export const Projects = () => {
 
     return (
         <div className="section3" >
+            {document.body.classList.remove('of-hide')}
             <NavProvider>
                 <NavContainer />
                 <Header />
