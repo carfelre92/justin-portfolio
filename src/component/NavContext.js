@@ -6,6 +6,7 @@ export const NavProvider = props => {
 
     const [isActive, setActive] = useState("true");
     const [isOpen, setOpen] = useState("true");
+    const [isScrollHidden, setScrollHidden] = useState("false");
 
     const handleToggle = () => {
         setActive(!isActive);
@@ -13,7 +14,7 @@ export const NavProvider = props => {
     }
 
     return (
-        <NavContext.Provider value={[isActive,setActive,isOpen,setOpen]}>
+        <NavContext.Provider value={[isActive,setActive,isOpen,setOpen,isScrollHidden, setScrollHidden]}>
             {props.children}
         </NavContext.Provider>
     );
