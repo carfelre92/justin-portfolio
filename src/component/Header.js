@@ -28,7 +28,7 @@ const Header = () => {
             <Container>
                 <Row>
                     <Col xs={12} className="nav-bar">
-                        <Link to="/" onClick={document.body.classList.remove('of-hide')}>
+                        <Link to="/" >
                             <img className="nav-logo-image" src="/images/other-image/Justin-logo.png" alt="" />
                         </Link>
                         <div className={`${isOpen ? "nav-icon" : "nav-icon open"}`} onClick={handleToggle}>

@@ -11,7 +11,12 @@ class Main extends Component {
         }
     }
 
+    fff(){
+        return document.body.classList.remove('modal-open');
+    }
+
     render() {
+        this.fff()
         return (
             <div className="section1">
                 <Container className="main-page">
