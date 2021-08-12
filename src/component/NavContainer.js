@@ -16,10 +16,11 @@ const NavContainer = () => {
 
     const handleToggle = () => {
         setActive(!isActive);
+        document.body.classList.remove('modal-open')
     }
 
     const removeHide = () => {
-        document.body.classList.remove('of-hide')
+        document.body.classList.remove('modal-open')
     }
 
     return (
