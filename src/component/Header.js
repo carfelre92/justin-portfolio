@@ -9,8 +9,8 @@ import * as FaIcons from 'react-icons/fa';
 const Header = () => {
 
     const [isActive, setActive] = useContext(NavContext);
-    const [isOpen, setOpen] = useState("false");
-    const [isScrollHidden, setScrollHidden] = useState("false");
+    const [isOpen, setOpen] = useContext(NavContext);
+    const [isScrollHidden, setScrollHidden] = useContext(NavContext);
 
     const handleToggle = () => {
         setActive(!isActive);
@@ -19,8 +19,8 @@ const Header = () => {
         setScrollHidden(!isScrollHidden);
     }
 
-    const ooo = () =>{
-        return (isScrollHidden ? document.body.classList.add('of-hide') : document.body.classList.remove('of-hide'));
+    const ooo = () => {
+        return (isScrollHidden ? document.body.classList.add('modal-open') : document.body.classList.remove('modal-open'));
     }
 
     return (
@@ -28,7 +28,7 @@ const Header = () => {
             <Container>
                 <Row>
                     <Col xs={12} className="nav-bar">
-                        <Link to="/">
+                        <Link to="/" onClick={document.body.classList.remove('of-hide')}>
                             <img className="nav-logo-image" src="/images/other-image/Justin-logo.png" alt="" />
                         </Link>
                         <div className={`${isOpen ? "nav-icon" : "nav-icon open"}`} onClick={handleToggle}>
